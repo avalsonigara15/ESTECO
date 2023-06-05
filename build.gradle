@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+task runJavaClass(type: JavaExec) {
+    main = 'StringCalculator.java' // Replace with the fully qualified name of your Java class
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task runJavaClass1(type: JavaExec) {
+    main = 'StringMultiply.java' // Replace with the fully qualified name of your Java class
+    classpath = sourceSets.main.runtimeClasspath
+}
